@@ -5,6 +5,7 @@ import com.google.gson.JsonParser;
 import java.util.ArrayList;
 
 public class Submission {
+    
     private int week;
     private int hours;
     private ArrayList<Integer> exercises;
@@ -14,8 +15,11 @@ public class Submission {
 //        this.hours = hours;
 //        this.teht = teht;
 //    }
-    public void exercises(ArrayList<String> teht){
-    this.exercises = new ArrayList<>();
+    
+    
+
+    public void exercises(ArrayList<String> teht) {
+        this.exercises = new ArrayList<>();
     }
 
     public void setWeek(int week) {
@@ -45,7 +49,7 @@ public class Submission {
 
     @Override
     public String toString() {
-        return "viikko "+week+": tehtyjä tehtäviä yhteensä: " + exercises.size()+ " , aikaa kului " + hours +" tuntia, tehdyt tehtävät: " + tehtdyTeht();
+        return "viikko "+week+":\n tehtyjä tehtäviä yhteensä: " + exercises.size()+ " , aikaa kului " + hours +" tuntia, tehdyt tehtävät: " + tehtdyTeht();
     }
     
 }

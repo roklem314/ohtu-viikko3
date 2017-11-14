@@ -12,6 +12,12 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 // vaihda oma opiskelijanumerosi seuraavaan, ÄLÄ kuitenkaan laita githubiin omaa opiskelijanumeroasi
 //        String studentNr = "011120775";
+        String kurssinTiedot = "https://studies.cs.helsinki.fi/ohtustats/courseinfo";
+        String text = Request.Get(kurssinTiedot).execute().returnContent().asString();
+        Gson gson = new Gson();
+        
+        System.out.println(gson.fromJson(text,Kurssi.class));
+        System.out.println("");
         System.out.println("opiskelijanumero: ");      
         String studentNr = scanner.next();
         if (args.length > 0) {
