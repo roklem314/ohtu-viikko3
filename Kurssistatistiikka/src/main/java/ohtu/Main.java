@@ -17,6 +17,7 @@ public class Main {
         Gson gson = new Gson();
         
         System.out.println(gson.fromJson(text,Kurssi.class));
+        
         System.out.println("");
         System.out.println("opiskelijanumero: ");      
         String studentNr = scanner.next();

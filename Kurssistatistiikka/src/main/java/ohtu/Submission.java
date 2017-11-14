@@ -5,7 +5,7 @@ import com.google.gson.JsonParser;
 import java.util.ArrayList;
 
 public class Submission {
-    
+    private int maximi;
     private int week;
     private int hours;
     private ArrayList<Integer> exercises;
@@ -15,6 +15,15 @@ public class Submission {
 //        this.hours = hours;
 //        this.teht = teht;
 //    }
+    
+
+    public int getMaximi() {
+        return maximi;
+    }
+
+    public void setMaximi(int maximi) {
+        this.maximi = maximi;
+    }
     
     
 
@@ -49,7 +58,8 @@ public class Submission {
 
     @Override
     public String toString() {
-        return "viikko "+week+":\n tehtyjä tehtäviä yhteensä: " + exercises.size()+ " , aikaa kului " + hours +" tuntia, tehdyt tehtävät: " + tehtdyTeht();
+        
+        return "viikko "+week+":\n tehtyjä tehtäviä yhteensä: " + exercises.size()+ " (maksimi "+ this.exercises.size()+" )"+" , aikaa kului " + hours +" tuntia, tehdyt tehtävät: " + tehtdyTeht();
     }
     
 }
